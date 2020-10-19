@@ -2,7 +2,7 @@
 
 PIDs="$(ps -aux | awk '{print $2}')"
 > 4output.txt
-
+echo "Please wait a little.."
 echo "PID : PPID : ART"
 for PID in $PIDs; do
 	if [[ -d /proc/"$PID" ]]; then
@@ -13,6 +13,8 @@ for PID in $PIDs; do
 		echo "$PID $parent $ART" >> 4output.txt
 	fi
 done
+> tmp
 tmp="$(sort -n --key=2 4output.txt)"
 echo -e "$tmp" > 4output.txt
 cat 4output.txt
+rm tmp

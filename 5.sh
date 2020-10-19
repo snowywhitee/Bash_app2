@@ -1,9 +1,10 @@
 #!/bin/bash
 
 #ps aux --sort -rss | sed '2'q
->5.output.txt
+>5output.txt
 if ! [[ -s "4output.txt" ]]; then
 	echo "File 4output.txt can't be empty. Please run command 4 and try again"
+	exit 1
 fi
 
 prev_parent=0
