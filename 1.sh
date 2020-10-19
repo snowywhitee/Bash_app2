@@ -11,4 +11,4 @@ while true; do
 done
 
 number="$(ps aux | sed -n 's/'"$choice"'/user/p' | wc -l)"
-echo -e "Number of processes: "$number"\033[0m"
+echo -e "Number of processes: "$number""

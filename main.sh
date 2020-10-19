@@ -11,7 +11,7 @@ function main_menu {
 		echo -e "5) 4th command + Additional info about children"
 		echo -e "6) The most memory consuming process (top)"
 		echo -e "7) Find 3 processes, reading the most bytes for 1 minute from the start up"
-		echo -e "   PID | Strings | Volume"
+		echo -e "   PID | cmd | rchar"
 		echo -e "8) Exit\033[0m"
 		read -r -p "Enter the command number: " choice
 		case "$choice" in
